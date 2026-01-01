@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <h3>scope of variable inside the funtion : </h3>
+        <button type="button" onclick="myfuntion()">Click Me</button> 
+         <p id="demo">This is demo one</p>
+         <p id="demo1"></p>
+        <script>
+         var b = 5;
+         function myfuntion(){
+            var a = 10;
+         document.getElementById("demo").innerHTML  = "This is a demo" +a * b;
+         }
+        </script>
+    </body>
+</html>
