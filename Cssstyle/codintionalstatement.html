@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <h1>Javascript codinationalstatement</h1>
+        <p>Click the button to get time based greeting</p>
+<button oneclick="myFuntion()">Try it </button>
+<p id="hour"></p>
+<p id="greeting"></p>
+        <script>
+      function myFuntion(){
+        var greeting;
+        var time = new Date().gethours();
+
+      
+
+      if (time < 10){
+   greeting = "Good morning";
+      }
+
+      else if (time < 20){
+      greeting = "Good Day";
+
+      }
+
+      else {
+        greeting = "Good Eveining";
+      }
+
+      document.getElementById("hour").innerHTML = " Current hour is ";
+      document.getElementById("greeting").innerHTML = greeting;
+    }
+        </script>
+    </body>
+</html>
