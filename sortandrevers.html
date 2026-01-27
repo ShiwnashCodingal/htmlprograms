@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h1>ascending and desending order</h1>
+        <h5>click on the button to sort : </h5>
+        <p id="result"></p>
+        <button onclick="ascending()">Ascending order</button>
+        <button onclick="descending()">descending order</button>
+
+        <script>
+            var points= [34,8,12.18,67,99,6,7]
+            document.getElementById("result").innerHTML = points;
+
+            function ascending(){
+                points.sort(function(a,b){
+                    return a - b;
+                });
+            document.getElementById("result").innerHTML = points;
+            }
+
+  function descending(){
+                points.sort(function(a,b){
+                    return b - a;
+                });
+            document.getElementById("result").innerHTML = points;
+                
+            }
+        </script>
+    </body>
+</html>
