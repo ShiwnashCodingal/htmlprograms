@@ -1,0 +1,26 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+         <h4>Click the button to get output </h4>
+        <button onclick="myFunction()">CLICK ME!!!!!</button>
+        <p id="demo"></p>
+
+        <script>
+            function myFunction(){
+                var x = 10;
+                var y = 20;
+
+
+                var a = eval("x + y") + "<br>";
+                var b = eval("6 * 7") + "<br>";
+                var c = eval("y - x") + "<br>";
+
+                var result = a + b + c;
+
+                document.getElementById("demo").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
