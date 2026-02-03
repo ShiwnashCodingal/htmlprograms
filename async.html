@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1 id="result"></h1>
+        <script>
+            async function Add(a, b){
+           let response = await a + b;
+           display(response);
+            }
+
+            function display(some){
+                document.getElementById("result").innerHTML = some;
+            }
+
+            Add(20,30);
+        </script>
+    </body>
+</html>
