@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h3>This project will convert js into JSON and send it to the server.</h3>
+        <p id="result"></p>
+        <script>
+            var obj  = {name : "Shiwansh", age : "14", designation : "Codingal student"};
+            var myJSON = JSON.stringify(obj);
+            var jsOBJ = JSON.parse(myJSON);
+
+            document.getElementById("result").innerHTML = jsOBJ.name;
+        </script>
+    </body>
+</html>
