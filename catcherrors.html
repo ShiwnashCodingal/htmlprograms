@@ -1,0 +1,28 @@
+<html>
+<body>
+
+<h2>The JavaScript String() Method</h2>
+
+<p>The String() method can convert a number to a string.</p>
+<p>It means when a number is added it turn into a different number but when a string is added the two differnt numbers join</p>
+<pre>For example:
+    normal 10 + 20 = 30
+    string 10 + 20 = 1020
+</pre>
+
+<b>This is and example when 80 and 90 is added</b>
+
+<p id="number_result"></p>
+<p id="string_result"></p>
+
+<script>
+var x = 80;
+var y = 90;
+
+document.getElementById("number_result").innerHTML = x + y;
+
+document.getElementById("string_result").innerHTML = String(x) + String(y); 
+</script>
+
+</body>
+</html>
