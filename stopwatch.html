@@ -1,0 +1,91 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="wrapper">
+                  <h1>Stopwatch</h1>
+        <p>
+            <span class="Seconds">00</span> :
+            <span class="Milliseconds">00</span>
+        </p>
+
+        <button id="button-Start">Start</button>
+        <button id="button-Stop">Stop</button>
+        <button id="button-Reset">Reset</button>
+        </div>
+  
+
+        <script>
+            window.onload = function(){
+                var seconds = 0;
+                var milliseconds = 0;
+
+                var appendSeconds = document.getElementById("Seconds");
+                var appendMilliseconds = document.getElementById("Milliseconds");
+
+                var buttonStart = document.getElementById("button-Start");
+                var buttonStop = document.getElementById("button-Stop");
+                var buttonReset = document.getElementById("button-Reset");
+                    
+                var Interval;
+
+                buttonStart.onclick = function(){
+                    clearInterval(Interval);
+                    Interval = setInterval(startTimer, 10)
+                }
+
+                 buttonStop.onclick = function(){
+                    clearInterval(Interval);
+                 }
+
+                  buttonReset.onclick = function(){
+                    clearInterval(Interval);
+                    seconds = 0;
+                    milliseconds = 0;
+
+                    appendSeconds.innerHTML = "00";
+                    appendMilliseconds.innerHTML = "00";
+                 }
+
+function startTimer() {
+
+milliseconds++;
+
+if (milliseconds <= 9) {
+
+appendMilliseconds.innerHTML = "0" + milliseconds;
+
+}
+
+else {
+
+appendMilliseconds.innerHTML = milliseconds;
+
+}
+
+if (milliseconds > 99) {
+
+seconds++;
+
+appendSeconds.innerHTML = seconds;
+
+milliseconds = 0;
+
+appendMilliseconds.innerHTML = "00";
+
+}
+
+if (seconds <= 9) {
+
+appendSeconds.innerHTML = "0" + seconds;
+
+}
+
+}
+            }
+        </script>
+
+    </body>
+</html>
+    
